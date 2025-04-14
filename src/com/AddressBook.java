@@ -3,6 +3,7 @@ package com;
 import java.util.ArrayList;
 import java.util.List;
 
+// Create a new AddressBook class
 public class AddressBook {
     private List<Contact> contactList;
 
