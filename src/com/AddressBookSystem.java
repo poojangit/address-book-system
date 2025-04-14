@@ -37,6 +37,7 @@ public class AddressBookSystem {
 		// Add to AddressBook
 		addressBook.addContact(newContact);
 		System.out.println();
+		// printing that contacts has been successfully added
 		System.out.println("\nContact added successfully! Here's your Address Book:");
 		addressBook.displayContacts();
 
