@@ -1,6 +1,7 @@
 package com;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -82,5 +83,18 @@ public class AddressBook {
             }
         }
         System.out.println("No contact found with the name: " + name);
+    }
+
+    public void deleteContact(String name) {
+        Iterator<Contact> iterator = contactList.iterator();
+        while (iterator.hasNext()) {
+            Contact contact = iterator.next();
+            if (contact.getFirstName().equalsIgnoreCase(name) || contact.getLastName().equalsIgnoreCase(name)) {
+                iterator.remove();
+                System.out.println("Contact deleted successfully!");
+                return;
+            }
+        }
+        System.out.println("No contact found with the name : " + name);
     }
 }
